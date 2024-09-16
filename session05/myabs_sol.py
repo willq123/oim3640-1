@@ -37,7 +37,7 @@ def my_abs_5(number):
 
     number: an integer or a floating point number
 
-    Pseudocode: This section explains the algorithm in plain language.
+    Pseudocode: This section explains the algorithm used in this function in plain language.
 
     1. if number's type is an int or float:
         1.1. if the number is negative:
@@ -47,11 +47,11 @@ def my_abs_5(number):
         return/raise an Error
     """
     if isinstance(number, (int, float)):
-        if number < 0:
-            return -number
-        else:
-            return number
-        # return my_abs_4(number)
+        # if number < 0:
+        #     return -number
+        # else:
+        #     return number
+        return my_abs_4(number)
     else:
         print("I don't know how to solve this")
         return "Wrong type of arguments"
