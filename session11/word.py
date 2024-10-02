@@ -65,8 +65,8 @@ def find_words_no_e():
     i.e. find the number of words without 'e', and the total number of words
     """
     f = open("data/words.txt")  # Assume words.txt is under data folder
-    words_no_e = 0
-    total_words = 0
+    words_no_e = 0     # Initialize the counter (of words without e) to 0
+    total_words = 0    # Initialize the counter (of total words) to 0
 
     for line in f:
         word = line.strip()
