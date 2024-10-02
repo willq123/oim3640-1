@@ -76,6 +76,7 @@ def find_words_no_e():
 
     return words_no_e / total_words
 
+
 perc_no_e = find_words_no_e()
 print(f'The percentage of the words with no "e" is {perc_no_e*100:.2f}%.')
 
