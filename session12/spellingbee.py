@@ -39,7 +39,7 @@ def solve(must_have, available):
     print all the qualified words
     """
     f = open("data/words.txt")  # open the word list file
-
+    # f = open("data/words_test.txt")
     # Iterate over the word list, check each word
     #   if the word is qualified (at least 4 letters, must include the must_have letter, use only the available letters)
     #        print the word
@@ -60,7 +60,7 @@ def main():
     center_letter = "m"
     other_letters = "acgeko"
 
-    solve(center_letter, other_letters)  # with the information
+    solve(center_letter, other_letters + center_letter)  # with the information
 
 
 main()
