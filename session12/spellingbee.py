@@ -7,7 +7,7 @@ def at_least(word, n):
     #     return True
     # else:
     #     return False
-    return len(word) >= n
+    return (len(word) >= n)
 
 
 def must_include(word, letter):
@@ -52,7 +52,8 @@ def solve(must_have, available):
             and must_include(word, must_have)
             and use_only(word, available)
         ):
-            print(word)
+            #print(word)
+            return word
 
 
 def main():
@@ -60,7 +61,8 @@ def main():
     center_letter = "m"
     other_letters = "acgeko"
 
-    solve(center_letter, other_letters + center_letter)  # with the information
+    #solve(center_letter, other_letters + center_letter)  # with the information
+    print(solve(center_letter, other_letters + center_letter))  # with the information
 
 
 main()
