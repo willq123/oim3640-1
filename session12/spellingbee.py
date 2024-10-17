@@ -9,7 +9,7 @@ def at_least(word, n):
     #     return False
     return (len(word) >= n)
 
-
+at_least("hello", 3)
 def must_include(word, letter):
     """Return True if the word contains the required letter"""
     return letter in word
@@ -52,8 +52,8 @@ def solve(must_have, available):
             and must_include(word, must_have)
             and use_only(word, available)
         ):
-            #print(word)
-            return word
+            print(word)
+            
 
 
 def main():
@@ -61,8 +61,6 @@ def main():
     center_letter = "m"
     other_letters = "acgeko"
 
-    #solve(center_letter, other_letters + center_letter)  # with the information
-    print(solve(center_letter, other_letters + center_letter))  # with the information
-
+    solve(center_letter, other_letters + center_letter)  # with the information
 
 main()
