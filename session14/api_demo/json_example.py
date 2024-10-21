@@ -1,22 +1,30 @@
 import json
 import os
 import urllib.request
+import pprint
 
 from dotenv import load_dotenv
 
 load_dotenv()
 APIKEY = os.getenv("OPENWEAHTER_API_KEY")
 
-city = "Wellesley"
-country_code = "us"
-url = f"https://api.openweathermap.org/data/2.5/weather?q={city},{country_code}&APPID={APIKEY}"
 
-# print(url)  # Open this URL in your browser to see the data
+def get_weather(city):
+    city = city.replace(" ", "%20")
+    country_code = "us"
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city},{country_code}&APPID={APIKEY}&units=metric"
 
-with urllib.request.urlopen(url) as response:
-    response_text = response.read().decode("utf-8")
-    weather_data = json.loads(response_text)
+    # print(url)  # Open this URL in your browser to see the data
 
-print(weather_data)
+    with urllib.request.urlopen(url) as response:
+        response_text = response.read().decode("utf-8")
+        weather_data = json.loads(response_text)
 
-# How do we get current temperature?
+    # pprint.pprint(weather_data)
+
+    # How do we get current temperature?
+    temp = weather_data["main"]["temp"]
+    print(temp)
+
+
+get_weather("New York")

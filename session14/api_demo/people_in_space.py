@@ -14,6 +14,17 @@ with urllib.request.urlopen(url) as response:
     pprint.pprint(data)
 
 # Can you print number of people in the space?
+# print(len(data))
+# print(data.keys())
+n = data['number']
+print(n)
 
 
-# Can you print all the names?
+# Can you print all the names and their space stations?
+people = data['people']  # this is a list of dicts
+# print(type(people))
+# print(type(people[0]))
+
+for p in people:
+    print(p['name'], p['craft'])
+
